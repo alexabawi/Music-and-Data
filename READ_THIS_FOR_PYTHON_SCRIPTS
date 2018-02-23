@@ -1,0 +1,29 @@
+This text file has instructions on how to run the two python scripts found in
+this repository.
+
+DOWNLOADING DATA----------------------------------------------------------------
+
+To download all of the data, first make sure you have the scripts downloaded.
+Then, when you're in the directory with the scripts, type
+
+`python3 save_chart_as_json.py project_data`
+
+(without the `). This will start the script; nothing else needs to be done for
+downloading. Just let your computer sit there and finish up.
+
+VERIFYING DATA------------------------------------------------------------------
+
+To verify the datafile when you're done, you'll need to read the .json file.
+However, simply typing `less project_data.json` will present you with unreadable
+formatting for the file, making it really quite difficult to discern what is
+going on. There's another script in the file, titled "print_json.py", which will
+print out the file in a much more readable format.
+
+To run this script, type
+
+`python3 print_json.py project_data`
+
+(without the `). This will run the printing script, which will use some python
+modules to print out the verified files to make it more readable. If You
+shouldn't need to scan the ENTIRE thing, but you will just need to scan parts of
+it to make sure it actually did download all of the data needed.
