@@ -17,7 +17,7 @@ Prints out the given filename using the pretty printer to make indentation more
 legible.
 
 Exceptions Thrown: OSError: Thrown if an OSError or DecodeError are caught in
-attempting to open and parse the given filename.
+                            attempting to open and parse the given filename.
 Params: filename: name of the file to be printed
 Return: None.
 """

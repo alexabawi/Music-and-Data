@@ -47,8 +47,10 @@ def grab_data(current_chart):
 """
 Appends the passed in dictionary into a .json file for analysis
 
-Params: dict_to_use: A dictionary of the chart to append to the json file for
-ease of use
+Params: list_to_use: A dictionary of the chart to append to the json file for
+                     ease of use
+        file_to_use: A string of the name of the file to serialize the json data
+                     onto
 Return: None.
 """
 def create_json(list_to_use, file_to_use):
@@ -83,7 +85,7 @@ def main():
         file_to_use += '.json'
 
     # Grab current chart
-    current_chart = bd.ChartData('hot-100')
+    current_chart = bd.ChartData('hot-100', date='2018-02-24')
 
     # Create a empty list of dicts of charts
     data = []
@@ -110,10 +112,10 @@ def main():
 
         print('Complete!\n')
 
-    except (KeyboardInterrupt):
+    except (EOFError, KeyboardInterrupt):
 
         # If CTRL+C is pressed, delete the incomplete file data before exiting
-        remove(filename)
+        remove(file_to_use)
 
         print('Interrupted. Removing incomplete data file and exiting...\n')
         exit(1)
