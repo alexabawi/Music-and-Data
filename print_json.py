@@ -58,6 +58,7 @@ def main():
     # Start try block to handle errors if thrown
     try:
 
+        # Grab the filename
         filename = argv[1]
 
         # Make sure file actually is a .json file

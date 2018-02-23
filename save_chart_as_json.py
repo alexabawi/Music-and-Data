@@ -111,7 +111,7 @@ def main():
 
         print('Complete!\n')
 
-    except (EOFError,KeyboardInterrupt):
+    except (EOFError, KeyboardInterrupt):
 
         print('Interrupted. Removing incomplete data file and exiting...\n')
         exit(1)
