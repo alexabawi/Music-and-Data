@@ -4,6 +4,7 @@
 """
 Filename: print_json.py
 Author: Nate Browne
+Last Edited: 23 February 2018
 Short script used to legibly print out .json files in a readable format using
 the pprint module.
 """
@@ -36,7 +37,7 @@ def print_the_file(filename):
 
         print('File invalid (either doesn\'t exist or can\'t be read).')
 
-        # Raise error for colling function to handle
+        # Raise error for calling function to handle
         raise OSError
 
 """
