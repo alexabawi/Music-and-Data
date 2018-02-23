@@ -11,7 +11,6 @@ file must be passed in as a command line argument.
 import json
 import billboard as bd
 from sys import exit, argv
-from os import remove
 
 """
 Grabs the user data from the billboard charts to create and return a dictionary
@@ -112,10 +111,7 @@ def main():
 
         print('Complete!\n')
 
-    except (EOFError, KeyboardInterrupt):
-
-        # If CTRL+C is pressed, delete the incomplete file data before exiting
-        remove(file_to_use)
+    except (EOFError,KeyboardInterrupt):
 
         print('Interrupted. Removing incomplete data file and exiting...\n')
         exit(1)
