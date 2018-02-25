@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-
 """
 Filename: print_json.py
 Author: Nate Browne
