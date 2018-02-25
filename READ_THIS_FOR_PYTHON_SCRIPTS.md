@@ -8,7 +8,7 @@ Then, when you're in the directory with the scripts, type
 
 `python3 save_chart_as_json.py project_data`
 
-(without the `). This will start the script; nothing else needs to be done for
+This will start the script; nothing else needs to be done for
 downloading. Just let your computer sit there and finish up. If you press CTRL+C
 when the script is running, this will interrupt and halt the downloads (so do
 this if you need to go somewhere). If the file already existed before you did
@@ -33,7 +33,7 @@ To run this script, type
 
 `python3 print_json.py project_data`
 
-(without the `). This will run the printing script, which will use some python
+This will run the printing script, which will use some python
 modules to print out the verified files to make it more readable. If You
 shouldn't need to scan the ENTIRE thing, but you will just need to scan parts of
 it to make sure it actually did download all of the data needed. It will raise
