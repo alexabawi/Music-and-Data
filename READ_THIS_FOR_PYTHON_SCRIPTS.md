@@ -34,7 +34,7 @@ To run this script, type
 `python3 print_json.py project_data`
 
 This will run the printing script, which will use some python
-modules to print out the verified files to make it more readable. If You
+modules to print out the verified files to make it more readable. You
 shouldn't need to scan the ENTIRE thing, but you will just need to scan parts of
 it to make sure it actually did download all of the data needed. It will raise
 (and handle) errors relating to bad I/O (file not existing, file unable to be
