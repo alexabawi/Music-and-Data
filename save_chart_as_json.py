@@ -71,8 +71,6 @@ Return: None.
 """
 def main():
 
-    # Create a counter of how many charts downloaded for keeping track
-    counter = 1
 
     # Check command line argument number for correctness. Should only be 1
     if len(argv) != 2:
@@ -105,7 +103,7 @@ def main():
         # Set up our loop to download all the data at once
         while current_chart.previousDate:
 
-            print('Grabbing chart data %d as a dict...\n' % counter)
+            print('Grabbing chart data %s as a dict...\n' % current_chart.date)
 
             # Grab the data and save it into a dict
             next_chart = grab_data(current_chart)
@@ -115,7 +113,6 @@ def main():
 
             # Update current chart to get next set of data
             current_chart = bd.ChartData('hot-100', current_chart.previousDate)
-            counter += 1
 
         # Dump that new list of dicts into the file given
         print('Appending to .json file...\n')
