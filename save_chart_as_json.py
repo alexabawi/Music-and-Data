@@ -3,7 +3,7 @@
 """
 Filename: save_chart_as_json.py
 Author: Nate Browne
-Last Edited: 23 February 2018
+Last Edited: 28 February 2018
 Program used to grab data from billboard charts and append it into a .json file
 for use in the python notebooks for COGS 108 Winter 2018. the name of the json
 file must be passed in as a command line argument.
@@ -13,7 +13,6 @@ import json
 import billboard as bd
 from sys import exit, argv
 from pathlib import Path
-from os import remove
 
 """
 Grabs the user data from the billboard charts to create and return a dictionary
@@ -93,7 +92,7 @@ def main():
     my_file = Path(next_filename)
 
     # Grab current chart
-    current_chart = bd.ChartData('hot-100', date='2018-02-24')
+    current_chart = bd.ChartData('hot-100', date='1972-12-23')
 
     # Create a empty list of dicts of charts
     data = []
@@ -101,7 +100,7 @@ def main():
     try:
 
         # Set up our loop to download all the data at once
-        while current_chart.previousDate != None:
+        while current_chart.previousDate != '1958-08-04':
 
             print('Grabbing chart data %s as a dict...\n' % current_chart.date)
 
@@ -128,12 +127,6 @@ def main():
     except (EOFError, KeyboardInterrupt):
 
         print('\nInterrupted. Removing incomplete data file and exiting...\n')
-
-        # Delete the file before exiting
-        if my_file.exists():
-
-            remove(my_file)
-
         exit(1)
 
 
