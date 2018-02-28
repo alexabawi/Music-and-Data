@@ -38,6 +38,9 @@ def print_the_file(filename):
 
         # Raise error for calling function to handle
         raise OSError
+    except(KeyboardInterrupt):
+
+        raise EOFError
 
 """
 Parses command line arguments, cleans up the filename to verify that it is
@@ -77,6 +80,11 @@ def main():
 
         print('Problem with I/O for file. Exiting...')
         exit(1)
+
+    except(EOFError):
+
+        print('\n\nExiting...')
+        exit(0)
 
 
 # Standard boilerplate to run the main function
