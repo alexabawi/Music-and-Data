@@ -101,7 +101,7 @@ def main():
     try:
 
         # Set up our loop to download all the data at once
-        while current_chart.previousDate:
+        while current_chart.previousDate != None:
 
             print('Grabbing chart data %s as a dict...\n' % current_chart.date)
 
