@@ -114,7 +114,12 @@ def main():
             # Update current chart to get next set of data
             current_chart = bd.ChartData('hot-100', current_chart.previousDate)
 
-        # Dump that new list of dicts into the file given
+        # Add the final chart to the list
+        print('Grabbing chart data %s as a dict...\n' % current_chart.date)
+        final_chart = grab_data(current_chart)
+        data.append(final_chart)
+
+        # Dump that list of dicts into the file given
         print('Appending to .json file...\n')
         create_json(data, file_to_use)
 
