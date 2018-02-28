@@ -22,25 +22,27 @@ Return: None.
 """
 def merge_json(file1, file2, destfile):
 
-    data = []
 
     try:
 
+        print('Opening file 1...')
+        with open(file1, 'r') as inputfile:
+
+            data1 = json.load(inputfile)
+
+        print('Opening file 2...')
+        with open(file2, 'r') as secondinput:
+
+            data2 = json.load(secondinput)
+
+        new_data = data1 + data2
+
+        print('Writing to new file...')
         with open(destfile, 'w') as outputfile:
 
-            with open(file1, 'r') as inputfile:
+            json.dump(new_data, outputfile)
 
-                filedata = json.load(inputfile)
-
-                data.append(filedata)
-
-            with open(file2, 'r') as inputfile:
-
-                filedata = json.load(inputfile)
-
-                data.append(inputfile)
-
-            json.dump(data, outputfile)
+        print('Complete!\n')
     except(OSError, json.decoder.JSONDecodeError):
 
         print('File invalid (either doesn\'t exist or can\'t be read).')
@@ -90,9 +92,6 @@ def main():
 
         # Merge the files
         merge_json(file1, file2, destination)
-
-        # Print a double newline
-        print('\n')
 
     except(OSError):
 
