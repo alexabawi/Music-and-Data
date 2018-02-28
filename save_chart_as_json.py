@@ -92,7 +92,7 @@ def main():
     my_file = Path(next_filename)
 
     # Grab current chart
-    current_chart = bd.ChartData('hot-100', date='1972-12-23')
+    current_chart = bd.ChartData('hot-100')
 
     # Create a empty list of dicts of charts
     data = []
@@ -100,7 +100,7 @@ def main():
     try:
 
         # Set up our loop to download all the data at once
-        while current_chart.previousDate != '1958-08-04':
+        while current_chart.previousDate != '2018-02-03':
 
             print('Grabbing chart data %s as a dict...\n' % current_chart.date)
 
