@@ -12,7 +12,6 @@ file must be passed in as a command line argument.
 import json
 import billboard as bd
 from sys import exit, argv
-from pathlib import Path
 
 """
 Grabs the user data from the billboard charts to create and return a dictionary
@@ -86,13 +85,8 @@ def main():
 
         file_to_use += '.json'
 
-    # Create a path to the file so that we can remove incomplete data if
-    # interrupted
-    next_filename = './' + file_to_use
-    my_file = Path(next_filename)
-
     # Grab current chart
-    current_chart = bd.ChartData('hot-100')
+    current_chart = bd.ChartData('hot-100', date='2018-02-24')
 
     # Create a empty list of dicts of charts
     data = []
@@ -100,7 +94,7 @@ def main():
     try:
 
         # Set up our loop to download all the data at once
-        while current_chart.previousDate != '2018-02-03':
+        while current_chart.previousDate != '1958-08-04':
 
             print('Grabbing chart data %s as a dict...\n' % current_chart.date)
 
