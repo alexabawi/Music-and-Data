@@ -4,7 +4,7 @@
 
 ### Intro
 
-This repository contains all of the relevant files for the COGS 108 project at
+This repository contains all of the relevant files for our COGS 108 final project at
 UCSD for Winter 2018. The project is contained inside of the
 `FinalProject.ipynb` file, and can be downloaded and opened using Jupyter.
 
