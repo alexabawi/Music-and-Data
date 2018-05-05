@@ -1,9 +1,16 @@
-This is your group repository for your final project for COGS108. This repostory is private, including to other students in the class, but visible to all COGS108 instructors.
+# The Numbers of Music: Using the Billboard Hot 100 to Analyze Trends in the Industry
+## By Zachary Gutierrez, Nate Browne, Andrew Nguyen, Erin Drury, Tyler Tran, and Churro Chong
 
-We have uploaded your Project Proposal here, and will provide comments and feedback on it here, as an issue. In the meantime, you are welcome and encouraged to use this repository to get started working on your project. 
 
-This repository will be frozen on the due date - at 11:59pm on Thursday, March 22nd, 2018.
+### Intro
 
-Make sure you have a notebook called 'FinalProject.ipynb' present in this repository by the due date. 
+This repository contains all of the relevant files for the COGS 108 project at
+UCSD for Winter 2018. The project is contained inside of the
+`FinalProject.ipynb` file, and can be downloaded and opened using Jupyter.
 
-Your final project will be graded based solely on that project notebook - make sure it has everything included and displayed (with code outputs) to evaluate your project. 
+### Pull Requests
+
+Pull requests are discouraged, since this repository will be left in its turn-in
+state. However, if you'd like to fork the repository and try some of it out on
+your own by downloading your own data from the charts using the provided Python
+scripts or by running different tests with our data that we provide, feel free!
